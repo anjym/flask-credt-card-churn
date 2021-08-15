@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>predition_Unique</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../static/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="homepage is-preload">
+
+
+
+	<div id="page-wrapper">
+
+ 
+					<!-- Nav -->
+						<nav id="nav" style="background:#fc0; padding-top: 5px;padding-bottom: 5px;">
+							<ul>
+								<li><a href="/">Accueil</a></li>
+								<li>
+									<a href="/predictun">Prediction Simple</a>
+								
+										</li>
+
+								<li><a href="/predictplus">Prédiction Multiple</a></li>
+
+							</ul>
+						</nav>
+
+				</div>		
+	
+		<div><br><br>	
+			<center><h3>Test de Churn sur un clients</h3></center>
+		</div>
+
+
+<div class=container"><br>
+    <div class="row align-items-center justify-content-center" style="
+    margin-left: 400px;">
+    <div class="col-md-4">
+	<center><form method="POST" role="form" action="/predict_un">
+
+		<div class="row">
+          <div class="col">
+		<label>Nombre de Transactions:</label>
+		 </div>
+		 <div class="col" style="padding-left: 0px;margin-left: 130px;">
+		<input type="text"  class="form-control" name="namequery1" style="
+    padding-bottom: 0px;
+    padding-top: 10px;
+" required><br>
+	   </div>
+	</div>
+        
+        <div class="row">
+          <div class="col">
+		<label >Solde renouvelable de la carte:</label>
+		</div>
+		 <div class="col" style="padding-left: 0px;margin-left: 90px;">
+		<input type="text"  class="form-control" name="namequery2" style="
+    padding-bottom: 0px;
+    padding-top: 10px;
+" required><br>
+		</div>
+	</div>
+        
+        <div class="row">
+          <div class="col">
+		<label for="var1">Nombre de produits détenus:</label>
+		</div>
+		 <div class="col" style="padding-left: 0px;margin-left: 100px;">
+		<input type="text" class="form-control" name="namequery3" style="
+    padding-bottom: 0px;
+    padding-top: 10px;
+" required><br>
+		</div>
+	</div>
+        
+        <div class="row">
+          <div class="col">
+		<label for="var1">Changement du nbre de transactions :</label>
+		</div>
+		 <div class="col" style="padding-left: 0px;margin-left: 35px;">
+		<input type="text" class="form-control" name="namequery4" style="
+    padding-bottom: 0px;
+    padding-top: 10px;
+" required><br>
+		</div>
+	</div>
+        
+        <div class="row">
+          <div class="col">
+		<label for="var1">Montant de transaction:</label>
+		</div>
+		 <div class="col" style="padding-left: 0px;margin-left: 145px;">
+		<input type="text" class="form-control" name="namequery5" style="
+    padding-bottom: 0px;
+    padding-top: 10px;
+" required><br>
+		</div>
+	</div>
+        
+        <div class="row">
+          <div class="col">
+		<label for="var1">Nombre Mois Inactif:</label>
+		</div>
+		 <div class="col" style="padding-left: 0px;margin-left: 170px;">
+		<input type="text" class="form-control" name="namequery6" style="
+    padding-bottom: 0px;
+    padding-top: 10px;
+" required><br>
+		</div>
+	</div>
+        
+        <div class="row">
+          <div class="col" >
+		<label for="var1">Montant des transaction Q4-Q1:</label>
+		</div>
+		 <div class="col" style="padding-left: 0px;margin-left: 85px;">
+		<input type="text" class="form-control" name="namequery7" style="
+    padding-bottom: 0px;
+    padding-top: 10px;
+" required><br>
+		</div>
+	</div>
+
+        
+		<button type="submit" class="btn btn-success" style=" height: 45px; font-size: 20px; padding-right: 30px; padding-left: 30px; background: #0f6987;">Lancer la prediction</button> 
+
+		<p><h3>Prediction : </h3>  {{prediction}}</p>
+	</form><br>
+	    
+</center>
+</div>
+</div>
+
+<div id="footer"style="padding-top: 5px;padding-bottom: 20px;height: 45px;margin-top: 10px;">
+					<center><h9 style="font-size: 12px;"> &copy; MarknCO 2021 | Dream!!! And we make it real !! </h9></center>
+					
+				
+					</div>
+</div>
+
+<!-- <hr /> -->
+					
+
+
+		<!-- Scripts -->
+			<script src="../static/assets/js/jquery.min.js"></script>
+			<script src="../static/assets/js/jquery.dropotron.min.js"></script>
+			<script src="../static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="../static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="../static/assets/js/browser.min.js"></script>
+			<script src="../static/assets/js/breakpoints.min.js"></script>
+			<script src="../static/assets/js/util.js"></script>
+			<script src="../static/assets/js/main.js"></script>
+
+	</body>
+</html>

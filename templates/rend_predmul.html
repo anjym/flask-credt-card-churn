@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<!--
+    Helios by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>Prédiction_Multiple</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../static/assets/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="../static/style.css">
+        <noscript><link rel="stylesheet" href="../static/assets/css/noscript.css" /></noscript>
+    </head>
+    <body class="homepage is-preload">
+
+
+
+    <div id="page-wrapper">
+ 
+                    <!-- Nav -->
+                        <nav id="nav" style="background:#df7366; padding-top: 5px;padding-bottom: 5px;">
+                            <ul>
+                                <li><a href="/">Accueil</a></li>
+                                <li>
+                                    <a href="/predictun">Prediction Simple</a>
+                                    
+                                </li>
+
+                                <li><a href="/predictplus">Prédiction Multiple</a></li>
+                                <li><a href="#">Contact</a></li>
+                                             
+                            </ul>
+                        </nav>
+
+                </div><br>  <br>
+<div class="container">
+<div>
+	<center><h2>Test Churn client</h2></center>
+</div>
+
+
+<div class="container"><br>
+
+<h1> Prediction Multiple </h1><br>
+
+</div>
+
+<hr />
+                    <div id="footer" style="height: 40px;padding-top: 15px;padding-bottom: 0px;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+
+
+                                <!-- Copyright -->
+                                    <div class="copyright">
+                                        <ul class="menu">
+                                            <li>&copy; MarknCO 2021 | </li><li>Dream!!! And we make it real ! | <a href="#">MarknCO</a></li>
+                                        </ul>
+                                    </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+<!-- Scripts -->
+            <script src="../static/assets/js/jquery.min.js"></script>
+            <script src="../static/assets/js/jquery.dropotron.min.js"></script>
+            <script src="../static/assets/js/jquery.scrolly.min.js"></script>
+            <script src="../static/assets/js/jquery.scrollex.min.js"></script>
+            <script src="../static/assets/js/browser.min.js"></script>
+            <script src="../static/assets/js/breakpoints.min.js"></script>
+            <script src="../static/assets/js/util.js"></script>
+            <script src="../static/assets/js/main.js"></script>
+
+
+ <script type="text/javascript">
+
+function downloadCSV(csv, filename) {
+    var csvFile;
+    var downloadLink;
+
+    // CSV file
+    csvFile = new Blob([csv], {type: "text/csv"});
+
+    // Download link
+    downloadLink = document.createElement("a");
+
+    // File name
+    downloadLink.download = filename;
+
+    // Create a link to the file
+    downloadLink.href = window.URL.createObjectURL(csvFile);
+
+    // Hide download link
+    downloadLink.style.display = "none";
+
+    // Add the link to DOM
+    document.body.appendChild(downloadLink);
+
+    // Click download link
+    downloadLink.click();
+}
+
+
+
+
+
+function exportTableToCSV(filename) {
+    var csv = [];
+    var rows = document.querySelectorAll("table tr");
+    
+    for (var i = 0; i < rows.length; i++) {
+        var row = [], cols = rows[i].querySelectorAll("td, th");
+        
+        for (var j = 0; j < cols.length; j++) 
+            row.push(cols[j].innerText);
+        
+        csv.push(row.join(","));        
+    }
+
+    // Download CSV file
+    downloadCSV(csv.join("\n"), filename);
+}
+</script>
+
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> -->
+</body>
+</html>

@@ -1,0 +1,40 @@
+Html
+<table>
+    <tbody id="tbody"></tbody>
+</table>
+
+Json
+
+[{
+    "key": "apple",
+    "value": 1.90
+}, {
+    "key": "berry",
+    "value": 1.7
+}, {
+    "key": "banana",
+    "value": 1.5
+}, {
+    "key": "cherry",
+    "value": 1.2
+}]
+
+
+JS
+<script type="text/javascript">
+var tbody = document.getElementById('tbody');
+
+for (var i = 0; i < obj.length; i++) {
+    var tr = "<tr>";
+
+    /* Verification to add the last decimal 0 */
+    if (obj[i].value.toString().substring(obj[i].value.toString().indexOf('.'), obj[i].value.toString().length) < 2) 
+        obj[i].value += "0";
+
+    /* Must not forget the $ sign */
+    tr += "<td>" + obj[i].key + "</td>" + "<td>$" + obj[i].value.toString() + "</td></tr>";
+
+    /* We add the table row to the table body */
+    tbody.innerHTML += tr;
+}
+</script>
