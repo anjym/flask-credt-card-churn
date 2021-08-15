@@ -11,47 +11,6 @@ import sqlite3
 #Init App
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite3:///churnclient2.sqlite3'
-db=SQLAlchemy(app)
-# ENV ='dev'
- 
-
-# if ENV =='dev':
-# 	app.debug=True
-# 	app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite3:///churnclient2.sqlite3'
-# else:
-# 	app.debug=False
-#  	SECRET_KEY=bkhvgyskhfjbkhqgkkshjvbkjgkbvbsgghbvnbvjvghjgbvjvgf
-#  	DATABASE_URL=sqlite:///churnclient2.sqlite3
-# 	app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
-#  	SECRET_KEY = os.environ.get('SECRET_KEY')
-# 	app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
-
-# 	db=SQLAlchemy(app)
-
-# class Dataweb1(db.Model):
-# 	__tablename__='dataweb1'
-# 	CLIENTNUM = db.column(db.Integer,primary_key=True)
-# 	Total_Trans_Ct = db.column(db.Integer)
-# 	Total_Revolving_Bal = db.column(db.Integer)
-# 	Total_Relationship_Count = db.column(db.Integer)
-# 	Total_Ct_Chng_Q4_Q1 = db.column(db.Float)
-# 	Total_Trans_Amt = db.column(db.Integer)
-# 	Months_Inactive_12_mon = db.column(db.Integer)
-# 	Total_Amt_Chng_Q4_Q1 = db.column(db.Integer)
-# 	Attrition_Flag = db.column(db.Text())
-
-# 	def __init__(Self,CLIENTNUM,Total_Trans_Ct,Total_Revolving_Bal,Total_Relationship_Count,Total_Ct_Chng_Q4_Q1,Total_Trans_Amt,Months_Inactive_12_mon,Total_Amt_Chng_Q4_Q1,Attrition_Flag):
-# 		self.CLIENTNUM = CLIENTNUM
-# 		self.Total_Trans_Ct = Total_Trans_Ct
-# 		self.Total_Revolving_Bal = Total_Revolving_Bal
-# 		self.Total_Relationship_Count = Total_Relationship_Count
-# 		self.Total_Ct_Chng_Q4_Q1 = Total_Ct_Chng_Q4_Q1
-# 		self.Total_Trans_Amt = Total_Trans_Amt
-# 		self.Months_Inactive_12_mon = Months_Inactive_12_mon
-# 		self.Total_Amt_Chng_Q4_Q1 = Total_Amt_Chng_Q4_Q1
-# 		self.Attrition_Flag = Attrition_Flag
-
-
 
 
 @app.route('/')
