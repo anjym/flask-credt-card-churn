@@ -92,4 +92,4 @@ def pred_plus():
 	return render_template('t.html', heat=heat, val=val)
 
 if __name__=='main__':
-	app.run()
+	app.run(host='0.0.0.0')
