@@ -90,3 +90,6 @@ def pred_plus():
 		heat=['Identifiant Client','Nbre de Transactions','Solde renouvelable de la carte','Nombre de produits détenus','Changement du nbre de transactions','Montant de transaction','Nbre Mois Inactif','Montant des transaction Q4-Q1','Staut_Actuel','prediction']
 		val=df2[heat].values
 	return render_template('t.html', heat=heat, val=val)
+
+if __name__ == "__main__":
+		app.run()
